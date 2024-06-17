@@ -28,7 +28,9 @@ def graph():
     y_values = [[tcs[j][i - st] for i in x_values] for j in range(0, 3)]
 
     for i in range(0, 3):
-        plt.plot(x_values, y_values[i], marker="o", label=f"{costs[i] // 10000}")
+        plt.plot(
+            x_values, y_values[i], marker="o", label=f"{costs[i] // 10000} (10K ₩)"
+        )
 
     plt.title("Total Cost on Number of Bins")
     plt.xlabel("Number of Bins")
